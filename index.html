@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwellSync — Automated Weather Rebooking for Outdoor Providers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Header / Nav -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <span class="font-extrabold text-xl text-blue-600">🌊 SwellSync</span>
+            <a href="https://charlieryan97.github.io/Atlantic-edge-demo/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-lg text-sm transition">Try Live Demo</a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-12 space-y-16">
+        
+        <!-- Hero Section -->
+        <section class="text-center space-y-6">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+                Turn Weather Cancellations into Instant Rebookings
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                Stop wasting hours on phone tag and WhatsApp after a storm hits. Automatically reschedule affected clients and protect your peak-season revenue.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+                <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg text-lg transition">Join the Waiting List</a>
+                <a href="https://charlieryan97.github.io/Atlantic-edge-demo/" target="_blank" id="demo" class="bg-white hover:bg-slate-100 text-blue-600 border border-blue-300 font-bold py-3 px-8 rounded-xl shadow text-lg transition">Try the Demo ➔</a>
+            </div>
+            <p class="text-xs text-slate-400">No credit card required. Built specifically for Irish outdoor activity operators.</p>
+        </section>
+
+        <!-- The Problem -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">The Problem</h2>
+            <blockquote class="border-l-4 border-blue-600 pl-4 italic text-slate-600 my-4">
+                "When a big Atlantic swell or gale hits overnight, I spend three hours texting forty people off a paper diary, half don't reply, and we lose hundreds in deposits."
+            </blockquote>
+            <p class="text-slate-600">
+                Manual rescheduling is messy, slow, and leaks revenue. When sessions are cancelled due to weather, operators lose valuable slots because customers don't rebook quickly enough over disjointed text chains.
+            </p>
+        </section>
+
+        <!-- How It Works -->
+        <section class="space-y-6">
+            <h2 class="text-2xl font-bold text-slate-900 text-center">How SwellSync Works</h2>
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-2">
+                    <span class="text-blue-600 font-extrabold text-xl">01</span>
+                    <h3 class="font-bold text-lg text-slate-800">One-Tap Cancellation</h3>
+                    <p class="text-sm text-slate-600">Cancel a weather-impacted session instantly from your phone while on site, moving all bookings to a smart queue.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-2">
+                    <span class="text-blue-600 font-extrabold text-xl">02</span>
+                    <h3 class="font-bold text-lg text-slate-800">Automated Rebooking</h3>
+                    <p class="text-sm text-slate-600">The system flags unbooked clients and surfaces available open slots to fill spots before revenue slips away.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-2">
+                    <span class="text-blue-600 font-extrabold text-xl">03</span>
+                    <h3 class="font-bold text-lg text-slate-800">Revenue Protection</h3>
+                    <p class="text-sm text-slate-600">Track pending bookings and total euro value at risk in real time on a clean financial dashboard.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="bg-blue-900 text-white p-8 rounded-2xl shadow-md text-center space-y-4">
+            <h2 class="text-2xl font-bold">Simple, Predictable Pricing</h2>
+            <p class="text-blue-200 max-w-md mx-auto">Designed to pay for itself on the very first rescued weather cancellation of the season.</p>
+            <div class="py-4">
+                <span class="text-4xl font-extrabold">€49</span><span class="text-blue-200">/month</span>
+                <p class="text-xs text-blue-300 mt-1">+ €99 one-time set-up and onboarding fee</p>
+            </div>
+            <a href="#waitlist" class="inline-block bg-white text-blue-900 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition">Get Started Today</a>
+        </section>
+
+        <!-- Waitlist Form (Sends no data per brief requirements) -->
+        <section id="waitlist" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 max-w-xl mx-auto space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900 text-center">Join the Early Access Waiting List</h2>
+            <p class="text-sm text-slate-600 text-center">Be the first outdoor provider in your area to automate your weather reschedules.</p>
+            
+            <form id="cta-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Business Name</label>
+                    <input type="text" required class="w-full border border-slate-300 p-3 rounded-lg focus:outline-none focus:border-blue-600" placeholder="e.g., Atlantic Surf Academy">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Work Email</label>
+                    <input type="email" required class="w-full border border-slate-300 p-3 rounded-lg focus:outline-none focus:border-blue-600" placeholder="name@surfschool.ie">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition">Request Early Access</button>
+            </form>
+            <div id="thank-you" class="hidden bg-green-50 text-green-800 p-4 rounded-lg text-center font-semibold">
+                🎉 Thank you! You're on the early access list. We will be in touch soon.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer with Required "Behind the build" link -->
+    <footer class="bg-white border-t border-slate-200 mt-20 py-8 text-center text-sm text-slate-500 space-y-2">
+        <p>&copy; 2026 SwellSync. All rights reserved (Fictional case study for National College of Ireland).</p>
+        <p>
+            <a href="notes.html" class="text-blue-600 underline font-semibold hover:text-blue-800">Behind the build</a>
+        </p>
+    </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('cta-form').style.display = 'none';
+            document.getElementById('thank-you').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
