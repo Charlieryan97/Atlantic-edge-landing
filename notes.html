@@ -5,55 +5,73 @@ Outdoor adventure operators in Ireland would definitely pay for a simple weather
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Notes - Behind the Build</title>
+    <title>SwellSync — Project Notes & Rationale</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 p-6 max-w-3xl mx-auto">
-    <h1 class="text-3xl font-bold mb-6 text-blue-600">Project Notes & Rationale</h1>
+<body class="bg-slate-50 text-slate-900 pb-16 min-h-screen">
 
-    <!-- HUNCH -->
-    <section class="mb-8 bg-white p-6 rounded-lg shadow">
-        <h2 class="text-xl font-semibold mb-2 text-gray-700">Hunch (before AI)</h2>
-        <p class="italic text-gray-600">"Outdoor adventure operators in Ireland would definitely pay for a simple weather-rebooking tool because manual phone tag wastes hours of peak season time and leaves thousands in unrecovered deposits sitting in paper diaries."</p>
-    </section>
+    <!-- Header Navigation -->
+    <header class="bg-white border-b border-slate-200 py-4 px-6 mb-8 shadow-sm sticky top-0 z-10">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-blue-600 flex items-center gap-2">
+                🌊 SwellSync
+            </h1>
+            <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-blue-600 border border-slate-300 px-3 py-1.5 rounded-lg transition">
+                ← Back to Landing Page
+            </a>
+        </div>
+    </header>
 
-    <!-- TASK 1: THINK IT THROUGH -->
-    <section class="mb-8 bg-white p-6 rounded-lg shadow">
-        <h2 class="text-xl font-semibold mb-4 text-gray-700">Task 1: Thinking & Strategy</h2>
+    <main class="max-w-4xl mx-auto px-6 space-y-8">
         
-        <h3 class="font-bold text-gray-800 mt-2">Chosen Niche:</h3>
-        <p class="text-gray-600 mb-2">Independent surf and kite-surfing schools along the Wild Atlantic Way.</p>
-        <ul class="list-disc pl-5 text-gray-600 mb-4">
-            <li><strong>Buyer:</strong> Surf school owner.</li>
-            <li><strong>User:</strong> Head instructor or desk manager.</li>
-            <li><strong>Pain (Invented quote):</strong> "When a big storm hits, I spend three hours texting forty people off a paper diary, half don't reply, and we lose hundreds in deposits."</li>
-        </ul>
+        <!-- Main Title -->
+        <div>
+            <h1 class="text-3xl font-extrabold text-slate-900">Project Notes & Rationale</h1>
+            <p class="text-slate-500 mt-1">Continuous Assessment 2 — Technology for Business (H7BTEC)</p>
+        </div>
 
-        <h3 class="font-bold text-gray-800 mt-2">Technology & Competitors:</h3>
-        <p class="text-gray-600 mb-4">Product Type: Automated booking management and weather-cancellation rescheduling portal.<br>
-        Competitors: 
-        <a href="https://www.checkfront.com" class="text-blue-500 underline" target="_blank">Checkfront</a> (checked Oct 19, 2026) and 
-        <a href="https://bookwhen.com" class="text-blue-500 underline" target="_blank">Bookwhen</a> (checked Oct 19, 2026).</p>
+        <!-- Section 1: Hunch (before AI) -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <h2 class="text-lg font-bold text-slate-800 mb-2">Hunch (before AI)</h2>
+            <p class="text-slate-600 italic">
+                "Outdoor adventure operators in Ireland would definitely pay for a simple weather-rebooking tool because manual phone tag wastes hours of peak season time and leaves thousands in unrecovered deposits sitting in paper diaries."
+            </p>
+        </section>
 
-        <h3 class="font-bold text-gray-800 mt-2">Business Model (Assumption):</h3>
-        <p class="text-gray-600 mb-4">€99 set-up fee plus €49 per month, reasoned as an affordable SaaS model for seasonal outdoor businesses that saves multiple hours of administration per weather cancellation.</p>
+        <!-- Section 2: Task 1: Thinking & Strategy -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
+            <h2 class="text-xl font-bold text-slate-900 border-b pb-3">Task 1: Thinking & Strategy</h2>
+            
+            <div>
+                <h3 class="font-bold text-slate-800 mb-1">Chosen Niche:</h3>
+                <p class="text-slate-600 text-sm">Independent surf and kite-surfing schools along the Wild Atlantic Way.</p>
+                <ul class="list-disc list-inside text-slate-600 text-sm mt-1 space-y-1">
+                    <li><strong class="text-slate-700">Buyer:</strong> Surf school owner.</li>
+                    <li><strong class="text-slate-700">User:</strong> Head instructor or desk manager.</li>
+                    <li><strong class="text-slate-700">Pain (Invented quote):</strong> "When a big Atlantic swell or gale hits overnight, I spend three hours texting forty people off a paper diary, half don't reply, and we lose hundreds in deposits."</li>
+                </ul>
+            </div>
 
-        <h3 class="font-bold text-gray-800 mt-2">Lean PRD:</h3>
-        <ol class="list-decimal pl-5 text-gray-600">
-            <li><strong>Hypothesis:</strong> Automated session cancellation rebooking recovers 80% of weather-cancelled slots within 48 hours.</li>
-            <li><strong>Audience:</strong> Independent outdoor activity providers in Ireland.</li>
-            <li><strong>Call to Action:</strong> Request early access / join waiting list.</li>
-            <li><strong>Success Metric:</strong> Conversion rate of visitors clicking "Try Demo" and submitting the waitlist form.</li>
-            <li><strong>Out of Scope:</strong> Payment processing gateways, multi-currency support, and automated SMS carrier integration.</li>
-        </ol>
-    </section>
+            <div>
+                <h3 class="font-bold text-slate-800 mb-1">Technology & Competitors:</h3>
+                <p class="text-slate-600 text-sm">
+                    <strong>Product Type:</strong> Automated booking management and weather-cancellation rescheduling portal.<br>
+                    <strong>Competitors:</strong> Checkfront and Bookwhen.
+                </p>
+            </div>
 
-    <!-- ALPHA TEST -->
-    <section class="mb-8 bg-white p-6 rounded-lg shadow">
-        <h2 class="text-xl font-semibold mb-2 text-gray-700">Alpha Test Log</h2>
-        <p class="text-gray-600 mb-2"><strong>What was tried:</strong> Tested the mobile layout on an iPhone, checking the "Today" view cancellation flow and the 48-hour red alert timer on the "Rebook" tab.</p>
-        <p class="text-gray-600 mb-2"><strong>What broke / confused:</strong> Initially, the "Cancel Session" button was too small to tap easily with wet/cold hands, and the text wrapping on mobile screens looked cramped.</p>
-        <p class="text-gray-600"><strong>What was changed:</strong> Updated the CSS to make touch targets full-width with large padding for one-handed use, and increased font sizes for outdoor readability.</p>
-    </section>
-</body>
-</html>
+            <div>
+                <h3 class="font-bold text-slate-800 mb-1">Business Model (Assumption):</h3>
+                <p class="text-slate-600 text-sm">
+                    €99 set-up fee plus €49 per month, reasoned as an affordable SaaS model for seasonal outdoor businesses that saves multiple hours of administration per weather cancellation.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-slate-800 mb-2">Lean PRD:</h3>
+                <ol class="list-decimal list-inside text-slate-600 text-sm space-y-1">
+                    <li><strong class="text-slate-700">Hypothesis:</strong> Automated session cancellation rebooking recovers 80% of weather-cancelled slots within 48 hours.</li>
+                    <li><strong class="text-slate-700">Audience:</strong> Independent outdoor activity providers in Ireland.</li>
+                    <li><strong class="text-slate-700">Call to Action:</strong> Request early access / join waiting list.</li>
+                    <li><strong class="text-slate-700">Success Metric:</strong> Conversion rate of visitors clicking "Try Demo" and submitting the waitlist form.</li>
+                    <li><strong class="text-slate-700">Out of Scope:</strong> Payment processing gateways, multi-currency support, and automated SMS
